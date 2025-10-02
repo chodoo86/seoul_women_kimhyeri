@@ -46,6 +46,28 @@ python src/pipelines/score.py --db build/ivd.db --mode export
 - `src/pipelines/ingest.py`: CSV → DB + transform runner
 - `src/pipelines/score.py`: retrain/score/export (XGBoost + logistic regression fallback)
 - `data/landing/`: dated folders with synthetic CSVs
+- `data/samples/`: sample CSV files for analysis
 - `docs/`: case study PDF and a simple architecture diagram
+- `data_analysis_report.md`: comprehensive data analysis report with visual insights
+- `visual_analysis.py`: Python script for generating visualizations
+
+## 📊 Data Analysis Report
+
+A comprehensive analysis report (`data_analysis_report.md`) is available that provides detailed insights into the 9 CSV datasets:
+
+- **Customer Analysis**: Institution types, regional distribution, scale analysis
+- **Sales Opportunity Analysis**: Stage distribution, lead sources, expected revenue
+- **Customer Interaction Analysis**: Channel performance, outcome patterns, engagement trends
+- **Order Pattern Analysis**: Monthly trends, customer behavior, revenue distribution
+- **Product Analysis**: Brand comparison, pricing analysis, installation requirements
+- **Bid & Service Analysis**: Success rates, ticket patterns, issue resolution
+
+### Visual Analysis
+Run `python visual_analysis.py` to generate comprehensive visualizations including:
+- Pie charts for distribution analysis
+- Bar charts for comparative analysis
+- Histograms for pattern recognition
+- Line charts for trend analysis
+- Stacked charts for multi-dimensional insights
 
 Good luck and have fun!
