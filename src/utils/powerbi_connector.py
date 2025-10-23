@@ -90,22 +90,22 @@ def export_for_powerbi(db_path, output_dir="powerbi_data", create_excel: bool = 
                     if create_csv:
                         output_file = os.path.join(output_dir, f"{table}.csv")
                         df.to_csv(output_file, index=False, encoding='utf-8-sig')
-                        print(f"✓ {table} → {output_file} ({len(df)} 행)")
+                        print(f"[OK] {table} → {output_file} ({len(df)} 행)")
                     if excel_writer is not None:
                         # 시트 이름은 31자 제한 대응 위해 잘라냄
                         sheet_name = table[:31]
                         df.to_excel(excel_writer, sheet_name=sheet_name, index=False)
                 else:
-                    print(f"⚠ {table} 테이블이 비어있습니다")
+                    print(f"[WARN] {table} 테이블이 비어있습니다")
             except Exception as e:
-                print(f"✗ {table} 내보내기 실패: {e}")
+                print(f"[ERROR] {table} 내보내기 실패: {e}")
         
         if excel_writer is not None:
             try:
                 excel_writer.close()
-                print(f"✓ Excel 통합 파일 생성 → {excel_path}")
+                print(f"[OK] Excel 통합 파일 생성 → {excel_path}")
             except Exception as e:
-                print(f"✗ Excel 파일 저장 실패: {e}")
+                print(f"[ERROR] Excel 파일 저장 실패: {e}")
         
         print(f"\n모든 데이터가 {output_dir} 폴더에 저장되었습니다.")
         if excel_path:
