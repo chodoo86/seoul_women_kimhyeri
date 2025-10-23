@@ -38,6 +38,9 @@ def fetch_features(con):
     df = df.merge(agg90, left_on='account_id', right_index=True, how='left')
     df = df.merge(agg180, left_on='account_id', right_index=True, how='left')
     df['amt90'] = df['amt90'].fillna(0.0); df['amt180'] = df['amt180'].fillna(0.0)
+    # 데이터 타입 변환
+    df['amt90'] = pd.to_numeric(df['amt90'], errors='coerce').fillna(0.0)
+    df['amt180'] = pd.to_numeric(df['amt180'], errors='coerce').fillna(0.0)
     df['y_close_90d'] = (df['amt90'] > 0).astype(int)
     df['y_amount_180d'] = df['amt180']
     return df

@@ -1,0 +1,13 @@
+product_id,product_name,product_type,brand,requires_install,list_price
+10,BioCore Control Z,Reagent,BioCore,0,660
+12,MedLabs Analyzer B,Analyzer,MedLabs,1,69684
+1,AlphaDx Analyzer A,Analyzer,AlphaDx,1,69039
+14,MedLabs Reagent Y,Reagent,MedLabs,0,647
+6,BioCore Analyzer A,Analyzer,BioCore,1,46870
+9,BioCore Reagent Y,Reagent,BioCore,0,218
+3,AlphaDx Reagent X,Reagent,AlphaDx,0,466
+2,AlphaDx Analyzer B,Analyzer,AlphaDx,1,44224
+15,MedLabs Control Z,Reagent,MedLabs,0,797
+5,AlphaDx Control Z,Reagent,AlphaDx,0,606
+8,BioCore Reagent X,Reagent,BioCore,0,771
+11,MedLabs Analyzer A,Analyzer,MedLabs,1,60335
